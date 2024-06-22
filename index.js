@@ -80,24 +80,23 @@ $form.addEventListener("submit", async (event) => {
 
   $button.removeAttribute("disabled");
   $input.removeAttribute("disabled");
-  $container.scrollTop = $container.scrollHeight;
+  $messages.scrollTop = $messages.scrollHeight;
 });
 
 function addMessage(content, sender) {
   const cloneTemplate = $template.content.cloneNode(true);
 
   const $newMessage = cloneTemplate.querySelector(".message");
-  const $span = $newMessage.querySelector("span");
+
   const $div = $newMessage.querySelector("div");
 
-  $span.textContent = sender === "bot" ? "GPT" : "Tú";
   $div.innerHTML = content;
 
   $newMessage.classList.add(sender);
 
   $messages.appendChild($newMessage);
 
-  $container.scrollTop = $container.scrollHeight;
+  $messages.scrollTop = $messages.scrollHeight;
 
   return $div;
 }
