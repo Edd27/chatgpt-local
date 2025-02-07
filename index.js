@@ -10,8 +10,8 @@ const $messages = $("ul");
 const $button = $("button");
 const $small = $("small");
 const $voices = $("select");
-const MODEL_LIST = ["Llama-3-8B-Instruct-q4f32_1-MLC-1k", "Qwen2.5-7B-Instruct", "Qwen2-7B-Instruct"]
-const SELECTED_MODEL = MODEL_LIST[2];
+const MODEL_LIST = ["Llama-3-8B-Instruct-q4f32_1-MLC-1k", "Qwen2.5-7B-Instruct-q4f32_1-MLC"]
+const SELECTED_MODEL = MODEL_LIST[1];
 if (isDesktop) {
   const engine = await CreateWebWorkerMLCEngine(
     new Worker(new URL("./worker.js", import.meta.url), {
