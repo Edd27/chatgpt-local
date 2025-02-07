@@ -10,7 +10,7 @@ const $messages = $("ul");
 const $button = $("button");
 const $small = $("small");
 const $voices = $("select");
-const SELECTED_MODEL = "Llama-3-8B-Instruct-q4f32_1-MLC-1k";
+const SELECTED_MODEL = "DeepSeek-R1-Distill-Llama-8B"; // "Llama-3-8B-Instruct-q4f32_1-MLC-1k";
 if (isDesktop) {
   const engine = await CreateWebWorkerMLCEngine(
     new Worker(new URL("./worker.js", import.meta.url), {
